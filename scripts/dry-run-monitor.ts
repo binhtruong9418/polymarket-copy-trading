@@ -19,8 +19,8 @@ import { enrichSignalMetadata } from "../src/signal/market-enricher.js";
 import pino from "pino";
 
 // ── Config (override via env vars) ──────────────────────────────────────────
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN ?? "8875554401:AAGr5Wf4L9FoCiJJ4ScODpYIdiuNfPz5oas";
-const TELEGRAM_CHAT_ID   = process.env.TELEGRAM_CHAT_ID   ?? "1800896372";
+const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN ?? "";
+const TELEGRAM_CHAT_ID   = process.env.TELEGRAM_CHAT_ID   ?? "";
 const TARGET_WALLETS     = (process.env.TARGET_WALLETS ?? "0xce25e214d5cfe4f459cf67f08df581885aae7fdc")
   .split(",").map((w) => w.trim().toLowerCase()).filter(Boolean);
 const COPY_RATIO         = Number(process.env.COPY_RATIO ?? "0.1");

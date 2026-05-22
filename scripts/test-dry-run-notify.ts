@@ -7,8 +7,9 @@ import type { TradeSignal, CopyRule } from "../src/types/index.js";
 import type { BuiltOrder } from "../src/execution/order-builder.js";
 
 // Inject test env before loading modules that read it
-process.env.TELEGRAM_BOT_TOKEN = "8875554401:AAGr5Wf4L9FoCiJJ4ScODpYIdiuNfPz5oas";
-process.env.TELEGRAM_CHAT_ID = "1800896372";
+// Copy values from your .env file or set them in the environment before running
+process.env.TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN ?? "";
+process.env.TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID ?? "";
 process.env.DRY_RUN = "true";
 process.env.LOG_LEVEL = "info";
 // Dummy required fields (not used in notification path)
