@@ -1,0 +1,38 @@
+{
+  "name": "polymarket-copy-trading",
+  "version": "1.0.0",
+  "description": "Ultra-low-latency Polymarket copy trading bot",
+  "main": "dist/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc && node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@polymarket/clob-client": "^5.8.1",
+    "@polymarket/real-time-data-client": "^1.4.0",
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^16.5.0",
+    "ethers": "^5.8.0",
+    "pino": "^9.7.0",
+    "pino-pretty": "^13.0.0",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^3.2.3",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.3"
+  }
+}
